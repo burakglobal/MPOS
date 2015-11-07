@@ -16,8 +16,8 @@
 		<li>Stratum support</li>
 		<li>Various difficulty settings to choose from including variable</li>
 		<li>Automatic/manual payout options</li>
-		<li>Low 0.01 {$GLOBAL.config.currency} fee for withdrawals</li>
-		<li>Reliable server uptime</li>
+		<li>Low 0.01 {$GLOBAL.config.currency} withdrawal fee</li>
+		<li>Solid state drive infrastructure</li>
 		</ul>
 		<br>
 		<p>Stratum connection options listed below.</p>
