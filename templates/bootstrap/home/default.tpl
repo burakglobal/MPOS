@@ -2,12 +2,12 @@
   <div class="col-lg-12">
     <div class="panel panel-info">
       <div class="panel-heading">
-        <i class="fa fa-bookmark"></i> Welcome to TheCoin.pw {$SITECOINNAME|default:"coin"} ({$GLOBAL.config.currency}) mining pool!
+        <i class="fa fa-bookmark"></i> Welcome to TheCoin.pw {$SITECOINNAME|default:"Coin"} ({$GLOBAL.config.currency}) mining pool!
         <br />
       </div>
       <div class="panel-body">
-        <p><img src="favicon.ico" alt="{$SITECOINNAME|default:"coin"}">
-		<p>Welcome to the newly established TheCoin.pw {$SITECOINNAME|default:"coin"} (FST) mining pool.</p>
+        <p><img src="favicon.ico" alt="{$SITECOINNAME|default:"Coin"}">
+		<p>Welcome to TheCoin.pw {$SITECOINNAME|default:"Coin"} (FST) mining pool.</p>
 		<br>
 		<p>Pool features include -</p><br>
 		<ul>
