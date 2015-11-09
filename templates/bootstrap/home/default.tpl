@@ -7,7 +7,7 @@
       </div>
       <div class="panel-body">
         <p><img src="favicon.ico" alt="{$SITECOINNAME|default:"Coin"}">
-		<p>Welcome to TheCoin.pw {$SITECOINNAME|default:"Coin"} (FST) mining pool.</p>
+		<p>Welcome to TheCoin.pw {$SITECOINNAME|default:"Coin"} ({$GLOBAL.config.currency}) mining pool.</p>
 		<br>
 		<p>Pool features include -</p><br>
 		<ul>
