@@ -4,6 +4,7 @@ $defflip = (!cfip()) ? exit(header('HTTP/1.1 401 Unauthorized')) : 1;
 $smarty->assign("SITESTRATUMURL", $config['gettingstarted']['stratumurl']);
 $smarty->assign("SITESTRATUMPORT", $config['gettingstarted']['stratumport']);
 $smarty->assign("SITECOINNAME", $config['gettingstarted']['coinname']);
+$smarty->assign("MANUALTXFEE"), $config['txfee_manual'];
 
 // Include markdown library
 use \Michelf\Markdown;
