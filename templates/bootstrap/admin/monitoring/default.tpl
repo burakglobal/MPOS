@@ -43,9 +43,9 @@
                     {$event.value|default:"0"|number_format:"2"} seconds
                   </font>
                 {else if $event.type == 'date'}
-                  {if ($smarty.now - 180) > $event.value}
+                  {if ($smarty.now - 600) > $event.value}
                     <font color="red">
-                  {else if ($smarty.now - 120) > $event.value}
+                  {else if ($smarty.now - 300) > $event.value}
                     <font color="orange">
                   {else}
                     <font color="green">
