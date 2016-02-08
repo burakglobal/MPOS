@@ -50,7 +50,7 @@ foreach ($aAllBlocks as $iIndex => $aBlock) {
   // If we have unaccounted blocks without share_ids, they might not have been inserted yet
   if (!$aBlock['share_id']) {
     $log->logError('E0062: Block has no share_id, not running payouts');
-    $monitoring->endCronjob($cron_name, 'E0062', 0, true);
+    $monitoring->endCronjob($cron_name, 'E0062', 0, true, false);
   }
 
   // Fetch last paid block information
