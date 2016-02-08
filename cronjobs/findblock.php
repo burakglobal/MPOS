@@ -126,7 +126,7 @@ if (empty($aAllBlocks)) {
             $log->logError('Failed to reset block in database: ' . $aBlockError['height']);
             $monitoring->endCronjob($cron_name, 'E0004', 1, true);
           }
-          $monitoring->endCronjob($cron_name, 'E0007', 0, true);
+          $monitoring->endCronjob($cron_name, 'E0007', 0, true, false);
         } else {
           $iRoundShares = $share->getRoundShares($iPreviousShareId, $iCurrentUpstreamId);
           $iAccountId = $user->getUserId($share->getUpstreamFinder());
@@ -134,7 +134,7 @@ if (empty($aAllBlocks)) {
         }
       } else {
         $log->logFatal('E0005: Unable to fetch blocks upstream share, aborted:' . $share->getCronError());
-        $monitoring->endCronjob($cron_name, 'E0005', 0, true);
+        $monitoring->endCronjob($cron_name, 'E0005', 0, true, false);
       }
 
       // Print formatted row
