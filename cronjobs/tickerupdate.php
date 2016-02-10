@@ -75,4 +75,7 @@ if ($api_keys = $setting->getValue('monitoring_uptimerobot_api_keys')) {
 }
 $log->logInfo(sprintf($strLogMask, 'Uptime Robot', 'n/a', number_format(microtime(true) - $start, 3), $status, $message));
 
-require_once('cron_end.inc.php');
+// Monitoring cleanup and status update
+$monitoring->endCronjob($cron_name, 'OK', 0, false, false);
+$monitoring->setStatus($cron_name . "_runtime", "time", microtime(true) - $cron_start[$cron_name]);
+$monitoring->setStatus($cron_name . "_endtime", "date", time());
