@@ -87,5 +87,7 @@ if ($affected === false) {
 }
 $log->logInfo(sprintf($strLogMask, 'purgeUserStats', $affected, number_format(microtime(true) - $start, 3), $status, $message));
 
-// Cron cleanup and monitoring
-require_once('cron_end.inc.php');
+// Monitoring cleanup and status update
+$monitoring->endCronjob($cron_name, 'OK', 0, false, false);
+$monitoring->setStatus($cron_name . "_runtime", "time", microtime(true) - $cron_start[$cron_name]);
+$monitoring->setStatus($cron_name . "_endtime", "date", time());
