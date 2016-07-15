@@ -493,7 +493,7 @@ class User extends Base {
     if (!is_numeric($threshold)) {
       $this->setErrorMessage('Invalid input for auto-payout');
       return false;
-    } else if ($threshold < $this->config['ap_threshold']['min'] && $threshold != 0) {
+    } else if ($threshold < $this->config['ap_threshold']['min']) {
       $this->setErrorMessage('Threshold below configured minimum of ' . $this->config['ap_threshold']['min']);
       return false;
     } else if ($threshold > $this->config['ap_threshold']['max']) {
