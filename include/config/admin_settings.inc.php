@@ -97,6 +97,13 @@ $aSettings['website'][] = array(
   'name' => 'website_notification_autohide', 'value' => $setting->getValue('website_notification_autohide'),
   'tooltip' => 'Hides Notifications after 5 seconds.'
 );
+$aSettings['website'][] = array(
+  'display' => 'Disable Block Notification Sound', 'type' => 'select',
+  'options' => array( 0 => 'Do not notify', 1 => 'Notify when Block is found' ),
+  'default' => 0,
+  'name' => 'website_blockfinder_notification', 'value' => $setting->getValue('website_blockfinder_notification'),
+  'tooltip' => 'Enable/Disable Blockfinder Sound.'
+);
 $aSettings['blockchain'][] = array(
   'display' => 'Disable Blockexplorer', 'type' => 'select',
   'options' => array( 0 => 'No', 1 => 'Yes' ),
@@ -232,6 +239,20 @@ $aSettings['statistics'][] = array(
   'tooltip' => '.'
 );
 $aSettings['acl'][] = array(
+  'display' => 'Show Stats for logged in users only', 'type' => 'select',
+  'options' => array( 0 => 'No', 1 => 'Yes' ),
+  'default' => 0,
+  'name' => 'acl_show_stats_loggedin', 'value' => $setting->getValue('acl_show_stats_loggedin'),
+  'tooltip' => 'Should statistics be visible for logged in users only.'
+);
+$aSettings['acl'][] = array(
+  'display' => 'Show Help for logged in users only', 'type' => 'select',
+  'options' => array( 0 => 'No', 1 => 'Yes' ),
+  'default' => 0,
+  'name' => 'acl_show_help_loggedin', 'value' => $setting->getValue('acl_show_help_loggedin'),
+  'tooltip' => 'Should Help Page be visible for logged in users only.'
+);
+$aSettings['acl'][] = array(
   'display' => 'Hide news post author', 'type' => 'select',
   'options' => array( 0 => 'No', 1 => 'Yes' ),
   'default' => 0,
@@ -307,6 +328,13 @@ $aSettings['acl'][] = array(
   'default' => 2,
   'name' => 'acl_chat_page', 'value' => $setting->getValue('acl_chat_page'),
   'tooltip' => 'Make the chat page private (users only) or public.'
+);
+$aSettings['acl'][] = array(
+  'display' => 'MOOT Forum Page', 'type' => 'select',
+  'options' => array( 0 => 'Private', 1 => 'Public', 2 => 'Disabled' ),
+  'default' => 2,
+  'name' => 'acl_moot_forum', 'value' => $setting->getValue('acl_moot_forum'),
+  'tooltip' => 'Make the forum page private (users only) or public.'
 );
 $aSettings['acl'][] = array(
   'display' => 'QRCode', 'type' => 'select',
@@ -413,6 +441,13 @@ $aSettings['system'][] = array(
   'name' => 'system_irc_chat', 'value' => $setting->getValue('system_irc_chat'),
   'tooltip' => 'Your IRC support channel name.'
 );
+$aSettings['system'][] = array(
+  'display' => 'Moot Forum Channel', 'type' => 'text',
+  'size' => 25,
+  'default' => 'lazypoolop',
+  'name' => 'system_moot_forum', 'value' => $setting->getValue('system_moot_forum'),
+  'tooltip' => 'Your MOOT support forum name.'
+);
 $aSettings['recaptcha'][] = array(
   'display' => 'Enable re-Captcha', 'type' => 'select',
   'options' => array( 0 => 'No', 1 => 'Yes' ),
@@ -442,18 +477,18 @@ $aSettings['recaptcha'][] = array(
   'tooltip' => 'Enable or Disable re-Captcha. Adds a re-Captcha to the login form.'
 );
 $aSettings['recaptcha'][] = array(
-  'display' => 're-Captcha Secret Key', 'type' => 'text',
+  'display' => 're-Captcha Private Key', 'type' => 'text',
   'size' => 25,
-  'default' => 'YOUR_SECRET_KEY',
-  'name' => 'recaptcha_secret_key', 'value' => $setting->getValue('recaptcha_secret_key'),
-  'tooltip' => 'Your secret key as given by your re-Captcha account.'
+  'default' => 'YOUR_PRIVATE_KEY',
+  'name' => 'recaptcha_private_key', 'value' => $setting->getValue('recaptcha_private_key'),
+  'tooltip' => '.'
 );
 $aSettings['recaptcha'][] = array(
-  'display' => 're-Captcha Site Key', 'type' => 'text',
+  'display' => 're-Captcha Public Key', 'type' => 'text',
   'size' => 25,
-  'default' => 'YOUR_SITE_KEY',
-  'name' => 'recaptcha_site_key', 'value' => $setting->getValue('recaptcha_site_key'),
-  'tooltip' => 'Your site key as given by your re-Captcha account.'
+  'default' => 'YOUR_PUBLIC_KEY',
+  'name' => 'recaptcha_public_key', 'value' => $setting->getValue('recaptcha_public_key'),
+  'tooltip' => 'Your public key as given by your re-Captcha account.'
 );
 $aSettings['monitoring'][] = array(
   'display' => 'Uptime Robot Private API Key', 'type' => 'text',
