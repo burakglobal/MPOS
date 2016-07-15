@@ -417,15 +417,6 @@ class Transaction extends Base {
       $this->setErrorMessage('Failed to mark transactions <= #' . $this->insert_id . ' as archived. ERROR: ' . $this->getError());
       return false;
     }
-    // Recheck the users balance to make sure it is now 0
-    if (!$aBalance = $this->getBalance($account_id)) {
-      $this->setErrorMessage('Failed to fetch balance for account ' . $account_id . '. ERROR: ' . $this->getCronError());
-      return false;
-    }
-    if ($aBalance['confirmed'] > 0) {
-      $this->setErrorMessage('User has a remaining balance of ' . $aBalance['confirmed'] . ' after a successful payout!');
-      return false;
-    }
     // Notify user via  mail
     $aMailData['email'] = $this->user->getUserEmailById($account_id);
     $aMailData['subject'] = $type . ' Completed';

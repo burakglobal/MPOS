@@ -24,65 +24,158 @@
 	<p>3. <strong>Select a difficulty.</strong></p>
     <ul>
       	<p>The below table displays available difficulties to mine with. If unsure of the difficulty level to select it is recommended to mine with variable difficulty.</p>
+		{if $GLOBAL.config.algorithm == 'sha256d'}
 			<table border="1" style="width:50%">
-				<tbody><tr>
-					<td bgcolor="#666666"><font color="white"><strong>Mining Difficulty</strong></font></td> 
-					<td bgcolor="#666666"><font color="white"><strong>Stratum Connection String</strong></font></td>
-				</tr>
-				<tr>
-					<td>Variable</td> 
-					<td>stratum+tcp://{$SITESTRATUMURL|default:$smarty.server.SERVER_NAME}:{$SITESTRATUMPORT|default:"3630"}</td>
-				</tr>
-				<tr>
-					<td>8</td> 
-					<td>stratum+tcp://{$SITESTRATUMURL|default:$smarty.server.SERVER_NAME}:{{$SITESTRATUMPORT|default:"3630"}+1}</td>
-				</tr>
-				<tr>
-					<td>16</td> 
-					<td>stratum+tcp://{$SITESTRATUMURL|default:$smarty.server.SERVER_NAME}:{{$SITESTRATUMPORT|default:"3630"}+2}</td>
-				</tr>
-				<tr>
-					<td>32</td> 
-					<td>stratum+tcp://{$SITESTRATUMURL|default:$smarty.server.SERVER_NAME}:{{$SITESTRATUMPORT|default:"3630"}+3}</td>
-				</tr>
-				<tr>
-					<td>64</td> 
-					<td>stratum+tcp://{$SITESTRATUMURL|default:$smarty.server.SERVER_NAME}:{{$SITESTRATUMPORT|default:"3630"}+4}</td>
-				</tr>
-				<tr>
-					<td>128</td> 
-					<td>stratum+tcp://{$SITESTRATUMURL|default:$smarty.server.SERVER_NAME}:{{$SITESTRATUMPORT|default:"3630"}+5}</td>
-				</tr>
-				<tr>
-					<td>256</td> 
-					<td>stratum+tcp://{$SITESTRATUMURL|default:$smarty.server.SERVER_NAME}:{{$SITESTRATUMPORT|default:"3630"}+6}</td>
-				</tr>
-				<tr>
-					<td>512</td> 
-					<td>stratum+tcp://{$SITESTRATUMURL|default:$smarty.server.SERVER_NAME}:{{$SITESTRATUMPORT|default:"3630"}+7}</td>
-				</tr>
-				<tr>
-					<td>1024</td> 
-					<td>stratum+tcp://{$SITESTRATUMURL|default:$smarty.server.SERVER_NAME}:{{$SITESTRATUMPORT|default:"3630"}+8}</td>
-				</tr>
-				<tr>
-					<td>2048</td> 
-					<td>stratum+tcp://{$SITESTRATUMURL|default:$smarty.server.SERVER_NAME}:{{$SITESTRATUMPORT|default:"3630"}+9}</td>
-				</tr>
-				<tr>
-					<td>4096</td> 
-					<td>stratum+tcp://{$SITESTRATUMURL|default:$smarty.server.SERVER_NAME}:{{$SITESTRATUMPORT|default:"3630"}+10}</td>
-				</tr>
-				<tr>
-					<td>8192</td> 
-					<td>stratum+tcp://{$SITESTRATUMURL|default:$smarty.server.SERVER_NAME}:{{$SITESTRATUMPORT|default:"3630"}+11}</td>
-				</tr>
-				<tr>
-					<td>16384</td> 
-					<td>stratum+tcp://{$SITESTRATUMURL|default:$smarty.server.SERVER_NAME}:{{$SITESTRATUMPORT|default:"3630"}+12}</td>
-				</tr>
-			</tbody>
-		</table>
+				<tbody>
+					<tr>
+						<td bgcolor="#666666"><font color="white"><strong>Mining Difficulty</strong></font></td> 
+						<td bgcolor="#666666"><font color="white"><strong>Stratum Connection String</strong></font></td>
+						<td bgcolor="#666666"><font color="white"><strong>Miner Hashrate</strong></font></td>
+					</tr>
+					<tr>
+						<td>Variable</td> 
+						<td>stratum+tcp://{$SITESTRATUMURL|default:$smarty.server.SERVER_NAME}:{$SITESTRATUMPORT|default:"3630"}</td>
+						<td>Any</td>
+					</tr>
+					<tr>
+						<td>8</td> 
+						<td>stratum+tcp://{$SITESTRATUMURL|default:$smarty.server.SERVER_NAME}:{{$SITESTRATUMPORT|default:"3630"}+1}</td>
+						<td>0-15GH/s</td>
+					</tr>
+					<tr>
+						<td>16</td> 
+						<td>stratum+tcp://{$SITESTRATUMURL|default:$smarty.server.SERVER_NAME}:{{$SITESTRATUMPORT|default:"3630"}+2}</td>
+						<td>16-31GH/s</td>
+					</tr>
+					<tr>
+						<td>32</td> 
+						<td>stratum+tcp://{$SITESTRATUMURL|default:$smarty.server.SERVER_NAME}:{{$SITESTRATUMPORT|default:"3630"}+3}</td>
+						<td>32-63GH/s</td>
+					</tr>
+					<tr>
+						<td>64</td> 
+						<td>stratum+tcp://{$SITESTRATUMURL|default:$smarty.server.SERVER_NAME}:{{$SITESTRATUMPORT|default:"3630"}+4}</td>
+						<td>64-127GH/s</td>
+					</tr>
+					<tr>
+						<td>128</td> 
+						<td>stratum+tcp://{$SITESTRATUMURL|default:$smarty.server.SERVER_NAME}:{{$SITESTRATUMPORT|default:"3630"}+5}</td>
+						<td>128-255GH/s</td>
+					</tr>
+					<tr>
+						<td>256</td> 
+						<td>stratum+tcp://{$SITESTRATUMURL|default:$smarty.server.SERVER_NAME}:{{$SITESTRATUMPORT|default:"3630"}+6}</td>
+						<td>256-511GH/s</td>
+					</tr>
+					<tr>
+						<td>512</td> 
+						<td>stratum+tcp://{$SITESTRATUMURL|default:$smarty.server.SERVER_NAME}:{{$SITESTRATUMPORT|default:"3630"}+7}</td>
+						<td>512-1023GH/s</td>
+					</tr>
+					<tr>
+						<td>1024</td> 
+						<td>stratum+tcp://{$SITESTRATUMURL|default:$smarty.server.SERVER_NAME}:{{$SITESTRATUMPORT|default:"3630"}+8}</td>
+						<td>1024-2047GH/s</td>
+					</tr>
+					<tr>
+						<td>2048</td> 
+						<td>stratum+tcp://{$SITESTRATUMURL|default:$smarty.server.SERVER_NAME}:{{$SITESTRATUMPORT|default:"3630"}+9}</td>
+						<td>2048-4095GH/s</td>
+					</tr>
+					<tr>
+						<td>4096</td> 
+						<td>stratum+tcp://{$SITESTRATUMURL|default:$smarty.server.SERVER_NAME}:{{$SITESTRATUMPORT|default:"3630"}+10}</td>
+						<td>4096-8191GH/s</td>
+					</tr>
+					<tr>
+						<td>8192</td> 
+						<td>stratum+tcp://{$SITESTRATUMURL|default:$smarty.server.SERVER_NAME}:{{$SITESTRATUMPORT|default:"3630"}+11}</td>
+						<td>8192-16383GH/s</td>
+					</tr>
+					<tr>
+						<td>16384</td> 
+						<td>stratum+tcp://{$SITESTRATUMURL|default:$smarty.server.SERVER_NAME}:{{$SITESTRATUMPORT|default:"3630"}+12}</td>
+						<td>> 16384GH/s</td>
+					</tr>
+				</tbody>
+			</table>
+		{/if}
+		{if $GLOBAL.config.algorithm == 'scrypt'}
+			<table border="1" style="width:50%">
+				<tbody>
+					<tr>
+						<td bgcolor="#666666"><font color="white"><strong>Mining Difficulty</strong></font></td> 
+						<td bgcolor="#666666"><font color="white"><strong>Stratum Connection String</strong></font></td>
+						<td bgcolor="#666666"><font color="white"><strong>Miner Hashrate</strong></font></td>
+					</tr>
+					<tr>
+						<td>Variable</td> 
+						<td>stratum+tcp://{$SITESTRATUMURL|default:$smarty.server.SERVER_NAME}:{$SITESTRATUMPORT|default:"3630"}</td>
+						<td>Any</td>
+					</tr>
+					<tr>
+						<td>8</td> 
+						<td>stratum+tcp://{$SITESTRATUMURL|default:$smarty.server.SERVER_NAME}:{{$SITESTRATUMPORT|default:"3630"}+1}</td>
+						<td>0-124KH/s</td>
+					</tr>
+					<tr>
+						<td>16</td> 
+						<td>stratum+tcp://{$SITESTRATUMURL|default:$smarty.server.SERVER_NAME}:{{$SITESTRATUMPORT|default:"3630"}+2}</td>
+						<td>125-249KH/s</td>
+					</tr>
+					<tr>
+						<td>32</td> 
+						<td>stratum+tcp://{$SITESTRATUMURL|default:$smarty.server.SERVER_NAME}:{{$SITESTRATUMPORT|default:"3630"}+3}</td>
+						<td>250-499KH/s</td>
+					</tr>
+					<tr>
+						<td>64</td> 
+						<td>stratum+tcp://{$SITESTRATUMURL|default:$smarty.server.SERVER_NAME}:{{$SITESTRATUMPORT|default:"3630"}+4}</td>
+						<td>500-999KH/s</td>
+					</tr>
+					<tr>
+						<td>128</td> 
+						<td>stratum+tcp://{$SITESTRATUMURL|default:$smarty.server.SERVER_NAME}:{{$SITESTRATUMPORT|default:"3630"}+5}</td>
+						<td>1000-1999KH/s</td>
+					</tr>
+					<tr>
+						<td>256</td> 
+						<td>stratum+tcp://{$SITESTRATUMURL|default:$smarty.server.SERVER_NAME}:{{$SITESTRATUMPORT|default:"3630"}+6}</td>
+						<td>2000-4999KH/s</td>
+					</tr>
+					<tr>
+						<td>512</td> 
+						<td>stratum+tcp://{$SITESTRATUMURL|default:$smarty.server.SERVER_NAME}:{{$SITESTRATUMPORT|default:"3630"}+7}</td>
+						<td>5000-9999KH/s</td>
+					</tr>
+					<tr>
+						<td>1024</td> 
+						<td>stratum+tcp://{$SITESTRATUMURL|default:$smarty.server.SERVER_NAME}:{{$SITESTRATUMPORT|default:"3630"}+8}</td>
+						<td>10000-24999KH/s</td>
+					</tr>
+					<tr>
+						<td>2048</td> 
+						<td>stratum+tcp://{$SITESTRATUMURL|default:$smarty.server.SERVER_NAME}:{{$SITESTRATUMPORT|default:"3630"}+9}</td>
+						<td>25000-49999KH/s</td>
+					</tr>
+					<tr>
+						<td>4096</td> 
+						<td>stratum+tcp://{$SITESTRATUMURL|default:$smarty.server.SERVER_NAME}:{{$SITESTRATUMPORT|default:"3630"}+10}</td>
+						<td>50000-99999KH/s</td>
+					</tr>
+					<tr>
+						<td>8192</td> 
+						<td>stratum+tcp://{$SITESTRATUMURL|default:$smarty.server.SERVER_NAME}:{{$SITESTRATUMPORT|default:"3630"}+11}</td>
+						<td>100000-2490000KH/s</td>
+					</tr>
+					<tr>
+						<td>16384</td> 
+						<td>stratum+tcp://{$SITESTRATUMURL|default:$smarty.server.SERVER_NAME}:{{$SITESTRATUMPORT|default:"3630"}+12}</td>
+						<td>> 250000KH/s</td>
+					</tr>
+				</tbody>
+			</table>
+		{/if}
     </ul>
     <p>4. <strong>Configure your mining software.</strong></p>
     <ul>
