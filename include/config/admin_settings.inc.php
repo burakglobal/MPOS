@@ -434,13 +434,6 @@ $aSettings['system'][] = array(
   'name' => 'system_irc_chat', 'value' => $setting->getValue('system_irc_chat'),
   'tooltip' => 'Your IRC support channel name.'
 );
-$aSettings['system'][] = array(
-  'display' => 'Moot Forum Channel', 'type' => 'text',
-  'size' => 25,
-  'default' => 'lazypoolop',
-  'name' => 'system_moot_forum', 'value' => $setting->getValue('system_moot_forum'),
-  'tooltip' => 'Your MOOT support forum name.'
-);
 $aSettings['recaptcha'][] = array(
   'display' => 'Enable re-Captcha', 'type' => 'select',
   'options' => array( 0 => 'No', 1 => 'Yes' ),
