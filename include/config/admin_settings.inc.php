@@ -470,18 +470,18 @@ $aSettings['recaptcha'][] = array(
   'tooltip' => 'Enable or Disable re-Captcha. Adds a re-Captcha to the login form.'
 );
 $aSettings['recaptcha'][] = array(
-  'display' => 're-Captcha Private Key', 'type' => 'text',
+  'display' => 're-Captcha Secret Key', 'type' => 'text',
   'size' => 25,
-  'default' => 'YOUR_PRIVATE_KEY',
-  'name' => 'recaptcha_private_key', 'value' => $setting->getValue('recaptcha_private_key'),
-  'tooltip' => '.'
+  'default' => 'YOUR_SECRET_KEY',
+  'name' => 'recaptcha_secret_key', 'value' => $setting->getValue('recaptcha_secret_key'),
+  'tooltip' => 'Your secret key as given by your re-Captcha account.'
 );
 $aSettings['recaptcha'][] = array(
-  'display' => 're-Captcha Public Key', 'type' => 'text',
+  'display' => 're-Captcha Site Key', 'type' => 'text',
   'size' => 25,
-  'default' => 'YOUR_PUBLIC_KEY',
-  'name' => 'recaptcha_public_key', 'value' => $setting->getValue('recaptcha_public_key'),
-  'tooltip' => 'Your public key as given by your re-Captcha account.'
+  'default' => 'YOUR_SITE_KEY',
+  'name' => 'recaptcha_site_key', 'value' => $setting->getValue('recaptcha_site_key'),
+  'tooltip' => 'Your site key as given by your re-Captcha account.'
 );
 $aSettings['monitoring'][] = array(
   'display' => 'Uptime Robot Private API Key', 'type' => 'text',
