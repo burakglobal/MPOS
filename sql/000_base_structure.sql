@@ -184,7 +184,7 @@ CREATE TABLE IF NOT EXISTS `statistics_shares` (
   `block_id` int(10) unsigned NOT NULL,
   `valid` bigint(20) NOT NULL,
   `invalid` bigint(20) NOT NULL DEFAULT '0',
-  `pplns_valid` bigint(20) NOT NULL,
+  `pplns_valid` bigint(20) NOT NULL DEFAULT '0',
   `pplns_invalid` bigint(20) NOT NULL DEFAULT '0',
   PRIMARY KEY (`id`),
   KEY `account_id` (`account_id`),
