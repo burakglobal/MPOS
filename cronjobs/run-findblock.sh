@@ -10,7 +10,7 @@
 PHP_BIN=$( which php )
 
 # List of cruns to execute
-CRONS="blockupdate.php findblock.php"
+CRONS="findblock.php blockupdate.php"
 
 # Output additional runtime information
 VERBOSE="0"
