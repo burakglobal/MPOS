@@ -106,7 +106,17 @@
                                     <tr>
                                         <td>16384</td>
                                         <td>stratum+tcp://{$SITESTRATUMURL|default:$smarty.server.SERVER_NAME}:{{$SITESTRATUMPORT|default:"3630"}+12}</td>
-                                        <td>> 16384 GH/s</td>
+                                        <td>16384-32767 GH/s</td>
+                                    </tr>
+                                    <tr>
+                                        <td>32768</td>
+                                        <td>stratum+tcp://{$SITESTRATUMURL|default:$smarty.server.SERVER_NAME}:{{$SITESTRATUMPORT|default:"3630"}+13}</td>
+                                        <td>32768-65535 GH/s</td>
+                                    </tr>
+                                    <tr>
+                                        <td>65536</td>
+                                        <td>stratum+tcp://{$SITESTRATUMURL|default:$smarty.server.SERVER_NAME}:{{$SITESTRATUMPORT|default:"3630"}+14}</td>
+                                        <td>> 65536 GH/s</td>
                                     </tr>
                                 </tbody>
                             </table>
@@ -191,7 +201,17 @@
                                     <tr>
                                         <td>16384</td>
                                         <td>stratum+tcp://{$SITESTRATUMURL|default:$smarty.server.SERVER_NAME}:{{$SITESTRATUMPORT|default:"3630"}+12}</td>
-                                        <td>> 250 MH/s</td>
+                                        <td>200-350 MH/s</td>
+                                    </tr>
+                                    <tr>
+                                        <td>32768</td>
+                                        <td>stratum+tcp://{$SITESTRATUMURL|default:$smarty.server.SERVER_NAME}:{{$SITESTRATUMPORT|default:"3630"}+13}</td>
+                                        <td>>350-550 MH/s</td>
+                                    </tr>
+                                    <tr>
+                                        <td>65536</td>
+                                        <td>stratum+tcp://{$SITESTRATUMURL|default:$smarty.server.SERVER_NAME}:{{$SITESTRATUMPORT|default:"3630"}+14}</td>
+                                        <td>> 550 MH/s</td>
                                     </tr>
                                 </tbody>
                             </table>
