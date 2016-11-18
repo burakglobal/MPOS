@@ -494,10 +494,10 @@ class User extends Base {
       $this->setErrorMessage('Invalid input for auto-payout');
       return false;
     } else if ($threshold < $this->config['ap_threshold']['min']) {
-      $this->setErrorMessage('Threshold below configured minimum of ' . $this->config['ap_threshold']['min']);
+      $this->setErrorMessage('Automatic Payout Threshold has been set below the minimum value of ' . $this->config['ap_threshold']['min']);
       return false;
     } else if ($threshold > $this->config['ap_threshold']['max']) {
-      $this->setErrorMessage('Threshold above configured maximum of ' . $this->config['ap_threshold']['max']);
+      $this->setErrorMessage('Automatic Payout Threshold has been set above the maximum value of ' . $this->config['ap_threshold']['max']);
       return false;
     }
     if (!is_numeric($donate)) {
