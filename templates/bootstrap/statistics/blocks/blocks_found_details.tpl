@@ -31,11 +31,7 @@
               {assign var="totalshares" value=$totalshares+$BLOCKSFOUND[block].shares}
               {assign var="count" value=$count+1}
               {if $GLOBAL.config.payout_system == 'pplns'}{assign var="pplnsshares" value=$pplnsshares+$BLOCKSFOUND[block].pplns_shares}{/if}
-              {if ! $GLOBAL.website.blockexplorer.disabled}
                 <td class="text-center"><a href="{$smarty.server.SCRIPT_NAME}?page=statistics&action=round&height={$BLOCKSFOUND[block].height}">{$BLOCKSFOUND[block].height}</a></td>
-              {else}
-                <td class="text-right">{$BLOCKSFOUND[block].height}</td>
-              {/if}
               <td class="text-center">
               {if $BLOCKSFOUND[block].confirmations >= $GLOBAL.confirmations}
                 <span class="label label-success">Confirmed</span>
