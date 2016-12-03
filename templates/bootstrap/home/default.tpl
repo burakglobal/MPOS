@@ -8,7 +8,7 @@
             <div class="panel-body">
                 <p><img src="favicon.ico" alt="{$SITECOINNAME|default:" Coin "}">                    
                     <p>Welcome and thank you for visting. <a href="http://thecoin.pw">TheCoin.pw</a> is a trusted mining pool provider for various cryptocurrencies all of which contain non mandatory pool fees and utilise the proportional payout method.</p>
-                    <p><a href="http://thecoin.pw">TheCoin.pw</a> solely relies on member donations/advertising rewards to assist with ongoing costs/upkeep to the mining pools/website. We hope you enjoy this mining pool!
+                    <p><a href="http://thecoin.pw">TheCoin.pw</a> solely rely on member donations/advertising rewards to assist with ongoing costs related to the operation of all mining pools, please consider donating. We hope you enjoy this mining pool!
                     <div class="panel panel-info">
                         <div class="panel-heading">
                             <i class="fa fa-tasks fa-fw"></i> Pool Details
