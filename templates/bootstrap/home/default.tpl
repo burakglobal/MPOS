@@ -7,7 +7,7 @@
             </div>
             <div class="panel-body">
                 <p><img src="favicon.ico" alt="{$SITECOINNAME|default:" Coin "}">
-                    <p>Welcome to TheCoin.pw {$SITECOINNAME|default:"Coin"} ({$GLOBAL.config.currency}) {if $GLOBAL.config.algorithm == 'sha256d'}SHA256{/if}{if $GLOBAL.config.algorithm == 'scrypt'}Scrypt{/if} mining pool.</p>
+                    <p>Welcome to TheCoin.pw {$SITECOINNAME|default:"Coin"} ({$GLOBAL.config.currency}) mining pool.</p>
                     <div class="panel panel-info">
                         <div class="panel-heading">
                             <i class="fa fa-tasks fa-fw"></i> Pool Details
@@ -15,6 +15,10 @@
                         <div class="panel-body no-padding table-responsive">
                             <table class="table table-striped table-bordered table-hover">
                                 <tbody>
+                                    <tr>
+                                        <th>Coin Algorithm</th>
+                                        <td>{if $GLOBAL.config.algorithm == 'sha256d'}SHA256{/if}{if $GLOBAL.config.algorithm == 'scrypt'}Scrypt{/if}</td>
+                                    </tr>
                                     <tr>
                                         <th>Payout System</th>
                                         <td>Proportional Payout</td>
@@ -29,7 +33,7 @@
                                     </tr>
                                     <tr>
                                         <th>Difficulty Selections</th>
-                                        <td>Automatic or Selectable (2 - 65536)</td>
+                                        <td>Automatic or Selectable (8 - 65536)</td>
                                     </tr>
                                     <tr>
                                         <th>Stratum Support</th>
