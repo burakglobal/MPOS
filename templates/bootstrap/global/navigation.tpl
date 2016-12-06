@@ -108,6 +108,19 @@
             </li>
             {else} {/if}
         </ul>
+		<center>
+            <br>
+    			<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+				<!-- Navigation -->
+				<ins class="adsbygoogle"
+    				style="display:inline-block;width:200px;height:200px"
+     				data-ad-client="ca-pub-1496645407031699"
+     				data-ad-slot="2280928163"></ins>
+				<script>
+				(adsbygoogle = window.adsbygoogle || []).push({});
+				</script>
+        	<br>
+    	</center>
         <!-- /#side-menu -->
     </div>
     <!-- /.sidebar-collapse -->
