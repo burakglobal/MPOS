@@ -46,7 +46,7 @@
                 {/if}
                 <li class="dropdown">
                     <a class="dropdown-toggle" href="{$smarty.server.SCRIPT_NAME}?page=statistics&action=pool">
-                    <i class="fa fa-tachometer fa-fw"></i> {$GLOBAL.hashrate|number_format:"0"} {$GLOBAL.hashunits.pool}</a>
+                    <i class="fa fa-tachometer fa-fw"></i> {$GLOBAL.hashrate|number_format:"1"} {$GLOBAL.hashunits.pool}</a>
                 </li>
                 <li class="dropdown">
                     <a class="dropdown-toggle" href="{$smarty.server.SCRIPT_NAME}?page=statistics&action=pool">
