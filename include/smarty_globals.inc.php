@@ -68,6 +68,7 @@ $aGlobal = array(
   'config' => array(
     'sharediffprecision' => $coin->getShareDifficultyPrecision(),
     'date' => $setting->getValue('system_date_format', '%m/%d/%Y %H:%M:%S'),
+    'website_name' => $setting->getValue('website_name'),
     'website' => $setting->getValue('website'),
     'website_design' => $setting->getValue('website_design'),
     'poolnav_enabled' => $setting->getValue('poolnav_enabled'),
