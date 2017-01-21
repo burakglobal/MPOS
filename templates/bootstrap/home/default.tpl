@@ -2,13 +2,13 @@
     <div class="col-lg-12">
         <div class="panel panel-info">
             <div class="panel-heading">
-                <i class="fa fa-bookmark"></i> Welcome to {$GLOBAL.config.website} {$SITECOINNAME|default:"Coin"} ({$GLOBAL.config.currency}) {if $GLOBAL.config.algorithm == 'sha256d'}SHA256{/if}{if $GLOBAL.config.algorithm == 'scrypt'}Scrypt{/if} mining pool!
+                <i class="fa fa-bookmark"></i> Welcome to {$WEBSITE}|default:"TheCoin.pw" {$SITECOINNAME|default:"Coin"} ({$GLOBAL.config.currency}) {if $GLOBAL.config.algorithm == 'sha256d'}SHA256{/if}{if $GLOBAL.config.algorithm == 'scrypt'}Scrypt{/if} mining pool!
                 <br />
             </div>
             <div class="panel-body">
                 <p><img src="favicon.ico" alt="{$SITECOINNAME|default:" Coin "}">                    
-                    <p>Welcome and thank you for visting. <a href="http://thecoin.pw">{$GLOBAL.config.website}</a> is a trusted mining pool provider for various cryptocurrencies all of which contain non mandatory pool fees and utilise the proportional payout method.</p>
-                    <p><a href="http://thecoin.pw">{$GLOBAL.config.website}</a> solely rely on member donations/advertising rewards to assist with ongoing costs related to the operation of all mining pools, please consider donating. We hope you enjoy this mining pool!
+                    <p>Welcome and thank you for visting. <a href="http://thecoin.pw">{$WEBSITE}|default:"TheCoin.pw"</a> is a trusted mining pool provider for various cryptocurrencies all of which contain non mandatory pool fees and utilise the proportional payout method.</p>
+                    <p><a href="http://thecoin.pw">{$WEBSITE}|default:"TheCoin.pw"</a> solely rely on member donations/advertising rewards to assist with ongoing costs related to the operation of all mining pools, please consider donating. We hope you enjoy this mining pool!
                     <div class="panel panel-info">
                         <div class="panel-heading">
                             <i class="fa fa-tasks fa-fw"></i> Pool Details
