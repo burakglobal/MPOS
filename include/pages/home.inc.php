@@ -1,6 +1,7 @@
 <?php
 $defflip = (!cfip()) ? exit(header('HTTP/1.1 401 Unauthorized')) : 1;
 
+$smarty->assign("WEBSITE_NAME", $config['website_name']);
 $smarty->assign("WEBSITE", $config['website']);
 $smarty->assign("SITESTRATUMURL", $config['gettingstarted']['stratumurl']);
 $smarty->assign("SITESTRATUMPORT", $config['gettingstarted']['stratumport']);
