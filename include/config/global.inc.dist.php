@@ -47,7 +47,7 @@ $config['getbalancewithunconfirmed'] = true;
 /**
  * Website Name
 **/
-$config['website'] = 'TheCoin.pw'
+$config['website'] = 'TheCoin.pw';
 
 /**
  * Database configuration
