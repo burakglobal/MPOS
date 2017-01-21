@@ -45,9 +45,10 @@ $config['algorithm'] = 'scrypt';
 $config['getbalancewithunconfirmed'] = true;
 
 /**
- * Website Name
+ * Website Details
 **/
-$config['website'] = 'TheCoin.pw';
+$config['website_name'] = 'TheCoin.pw';
+$config['website'] = 'http://thecoin.pw';
 
 /**
  * Database configuration
