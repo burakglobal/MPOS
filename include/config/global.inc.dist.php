@@ -45,6 +45,11 @@ $config['algorithm'] = 'scrypt';
 $config['getbalancewithunconfirmed'] = true;
 
 /**
+ * Website Name
+**/
+$config['website'] = 'TheCoin.pw'
+
+/**
  * Database configuration
  *  MySQL database configuration
  *   https://github.com/MPOS/php-mpos/wiki/Config-Setup#wiki-database-configuration
