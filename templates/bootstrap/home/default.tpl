@@ -2,7 +2,7 @@
     <div class="col-lg-12">
         <div class="panel panel-info">
             <div class="panel-heading">
-                <i class="fa fa-bookmark"></i> Welcome to {$WEBSITE}|default:"TheCoin.pw" {$SITECOINNAME|default:"Coin"} ({$GLOBAL.config.currency}) {if $GLOBAL.config.algorithm == 'sha256d'}SHA256{/if}{if $GLOBAL.config.algorithm == 'scrypt'}Scrypt{/if} mining pool!
+                <i class="fa fa-bookmark"></i> Welcome to {$WEBSITE|default:"TheCoin.pw"} {$SITECOINNAME|default:"Coin"} ({$GLOBAL.config.currency}) {if $GLOBAL.config.algorithm == 'sha256d'}SHA256{/if}{if $GLOBAL.config.algorithm == 'scrypt'}Scrypt{/if} mining pool!
                 <br />
             </div>
             <div class="panel-body">
