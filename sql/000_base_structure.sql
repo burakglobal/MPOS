@@ -143,6 +143,7 @@ CREATE TABLE IF NOT EXISTS `settings` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 INSERT INTO `settings` (`name`, `value`) VALUES ('DB_VERSION', '1.0.2');
+INSERT INTO `settings` (`name`, `value`) VALUES ('website_theme', 'bootstrap');
 
 CREATE TABLE IF NOT EXISTS `shares` (
   `id` bigint(30) NOT NULL AUTO_INCREMENT,
