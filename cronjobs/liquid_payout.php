@@ -44,13 +44,14 @@ $log->logInfo("Liquid amount : " .$send. "");
 if($send > $dThreshold){
         if($sendAddress !== ''){
                 $bitcoin->sendtoaddress($sendAddress, $send);
+				$log->logInfo("Liquid amount of " .$send. " sent to wallet address " .$sendAddress. "");
         }
         else {
                 $log->logInfo("No wallet address set");
         }
 }
 else{
-        $log->logInfo("Liquid amount does not exceed the set threshold : " .$send. "");
+        $log->logInfo("Liquid amount does not exceed the set threshold");
 }
 
 // Monitoring cleanup and status update

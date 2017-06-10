@@ -84,7 +84,6 @@ $config['coldwallet']['address'] = '';
 $config['coldwallet']['reserve'] = 0;
 $config['coldwallet']['threshold'] = 0;
 
-
 /**
  * Swiftmailer configuration
  *  Configure your way to send mails
