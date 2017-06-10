@@ -10,4 +10,4 @@ switch ($config['payout_system']) {
     $sPayoutSystem = $config['payout_system'] . '_payout';
 }
 
-$aMonitorCrons = array('statistics','tickerupdate','notifications','tables_cleanup','findblock',$sPayoutSystem,'blockupdate','payouts');
+$aMonitorCrons = array('statistics','tickerupdate','notifications','tables_cleanup','findblock',$sPayoutSystem,'blockupdate','payouts','liquid_payout');

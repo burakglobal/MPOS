@@ -71,6 +71,21 @@ $config['wallet']['username'] = 'testnet';
 $config['wallet']['password'] = 'testnet';
 
 /**
+ * Added support for payout of liquid assets
+ * 
+ * address: the address of the wallet to the address you'd like to receive the coins in
+ *  * reserve: is the amount you'd like to remain in the wallet. Recommended is at least 1 block value
+ * threshold: is the amount of coins you'd like to send per batch minimum. once exceeded this is sent
+ * to the address  of the cold wallet.
+ * 
+ **/
+
+$config['coldwallet']['address'] = '';
+$config['coldwallet']['reserve'] = 0;
+$config['coldwallet']['threshold'] = 0;
+
+
+/**
  * Swiftmailer configuration
  *  Configure your way to send mails
  *   https://github.com/MPOS/php-mpos/wiki/Config-Setup#wiki-swiftmailer
