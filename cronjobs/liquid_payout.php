@@ -7,15 +7,15 @@ chdir(dirname(__FILE__));
 // Include all settings and classes
 require_once('shared.inc.php');
 
-// Check For RPC Connection
+// Check for RPC connection
 if ($bitcoin->can_connect() === true){
 $dBalance = $bitcoin->getbalance();
 
-// Check Wallet Balance
+// Check wallet balance
 $log->logDebug("The wallet balance is " .$dBalance. "");
 $dGetInfo = $bitcoin->getinfo();
 
-// Check for POS Mint
+// Check for POS mint
 if (is_array($dGetInfo) && array_key_exists('newmint', $dGetInfo)) {
 $dNewmint = $dGetInfo['newmint'];
 $log->logDebug("Current mint is: " .$dNewmint );
@@ -32,13 +32,13 @@ $log->logDebug("Current mint is: " .$dNewmint );
 $dLockedBalance = $transaction->getLockedBalance();
 $log->logDebug("The locked wallet balance for users is: " .$dLockedBalance. "");
 
-// Fetch Final Wallet Balance after Transfer
+// Fetch final wallet balance after transfer
 $dFloat = $dLockedBalance + $config['coldwallet']['reserve'];
 $dThreshold = $config['coldwallet']['threshold'];
 $sendAddress = $config['coldwallet']['address'];
 $log->logDebug("The locked wallet balance and float amounts to: " .$dFloat. "");
 
-// Send Liquid Balance
+// Send liquid balance
 $send = $dBalance - $dFloat ;
 $log->logInfo("Liquid amount : " .$send. "");
 if($send > $dThreshold){
@@ -51,7 +51,7 @@ if($send > $dThreshold){
         }
 }
 else{
-        $log->logInfo("Liquid amount does not exceed the set threshold");
+        $log->logInfo("Liquid amount does not exceed the set threshold of " .$dThreshold. "");
 }
 
 // Monitoring cleanup and status update
