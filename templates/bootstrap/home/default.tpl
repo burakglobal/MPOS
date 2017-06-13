@@ -52,10 +52,28 @@
                             </table>
                         </div>
                     </div>
-                    <br> {if $GLOBAL.config.algorithm == 'sha256d'}
+					<div class="panel panel-info">
+                        <div class="panel-heading">
+                            <i class="fa fa-external-link fa-fw"></i> Advertisement
+                        </div>
+                        <div class="panel-body no-padding table-responsive">
+							<center>
+								<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+								<ins class="adsbygoogle"
+								style="display:block"
+								data-ad-client="ca-pub-1496645407031699"
+								data-ad-slot="3529447763"
+								data-ad-format="auto"></ins>
+								<script>
+								(adsbygoogle = window.adsbygoogle || []).push({});
+								</script>
+							</center>
+                        </div>
+                    </div>					
+                    {if $GLOBAL.config.algorithm == 'sha256d'}
                     <div class="panel panel-info">
                         <div class="panel-heading">
-                            <i class="fa fa-tasks fa-fw"></i> Stratum Connection Details
+                            <i class="fa fa-plug fa-fw"></i> Stratum Connection Details
                         </div>
                         <div class="panel-body no-padding table-responsive">
                             <table class="table table-striped table-bordered table-hover">
@@ -150,7 +168,7 @@
                     {/if} {if $GLOBAL.config.algorithm == 'scrypt'}
                     <div class="panel panel-info">
                         <div class="panel-heading">
-                            <i class="fa fa-tasks fa-fw"></i> Stratum Connection Details
+                            <i class="fa fa-plug fa-fw"></i> Stratum Connection Details
                         </div>
                         <div class="panel-body no-padding table-responsive">
                             <table class="table table-striped table-bordered table-hover">
