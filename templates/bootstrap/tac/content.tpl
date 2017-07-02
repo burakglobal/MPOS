@@ -1,9 +1,9 @@
 <p>This agreement governs your use of {$GLOBAL.website.name}.</p>
-<br><br>
+<br>
 <p>The following terminology applies to these Terms and Conditions, Privacy Statement and Disclaimer Notice and any or all agreements: "Miner", “You” and “Your” refers to you, the person accessing this website and accepting the mining pool's terms and conditions. "The Pool", "The Mining Pool", "Ourselves", "We" and "Us", refers to the mining pool service. Any use of the above terminology or other words in the singular, plural, capitalisation and/or he/she or they, are taken as interchangeable and therefore as referring to same.</p>
 <p>By using any of the mining pools or registering an account on the website, you agree to be bound by the terms and conditions below. If you do not agree with the terms and conditions in this agreement you may not use the mining pool.</li>
 <p>The {$GLOBAL.website.name} staff may modify this agreement and any policies affecting the site at any point of time. Such modification is effective immediately upon posting to the website and will be distribution via the 'site news' section on the website. Your continued use of the mining pool following any modification to this agreement shall be deemed an acceptance of all modifications.</p>
-<br><br>
+<br>
 <ul>
   <li>The mining pool rewards miners according to a <strong>{$GLOBAL.config.payout_system|upper}</strong> system with <strong>{$GLOBAL.fees|upper}%</strong> fee. The fee may change at any time, but notice will be given before doing so. Any fee change will be communicated through the mining pools 'site news' section.</li>
   <li>In the event of a blockchain fork members will not be credited for any coins earned whilst the mining pool was connected to the forked blockchain. Any transactions performed whilst the mining pool was connected to the forked blockchain will be invalid.</li>
@@ -13,5 +13,5 @@
   <li>Multiple accounts controlled by one person may be considered as a botnet and an investigation will be opened, see above point.</li>
 </ul>
 <br><br>
-<strong>Log Files</strong>
+<strong>Logging</strong>
 <p>We use IP addresses to analyse trends, administer the site, track user actions, and gather broad demographic information for aggregate use. IP addresses are not linked to personally identifiable information. Additionally, for systems administration, detecting usage patterns and troubleshooting purposes, our web servers automatically log standard access information including browser type, access times/open mail, URL requested, and referral URL. This information is not shared with third parties and is used only within this mining pool on a need-to-know basis. Any individually identifiable information related to this data will never be used in any way different to that stated above without your explicit permission.</p>
