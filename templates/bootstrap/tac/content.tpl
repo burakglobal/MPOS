@@ -12,6 +12,6 @@
   <li>Botnets are not welcome, accounts with a large amount of miners connecting from different IPs may be suspended without prior notice. If we are uncertian then an investigation will be opened and the member will be notified via their configured e-mail address. If we do not receive a response your account may be suspended.</li>
   <li>Multiple accounts controlled by one person may be considered as a botnet and an investigation will be opened, see above point.</li>
 </ul>
-<br><br>
+<br>
 <strong>Logging</strong>
 <p>We use IP addresses to analyse trends, administer the site, track user actions, and gather broad demographic information for aggregate use. IP addresses are not linked to personally identifiable information. Additionally, for systems administration, detecting usage patterns and troubleshooting purposes, our web servers automatically log standard access information including browser type, access times/open mail, URL requested, and referral URL. This information is not shared with third parties and is used only within this mining pool on a need-to-know basis. Any individually identifiable information related to this data will never be used in any way different to that stated above without your explicit permission.</p>
