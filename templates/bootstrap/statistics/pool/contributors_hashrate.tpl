@@ -29,20 +29,20 @@
               <td class="text-right">{$CONTRIBHASHES[contrib].hashrate|number_format}</td>
               <td class="text-right">{$estday|number_format:"3"}</td>
               {if $GLOBAL.config.price.enabled}
-              {if $GLOBAL.config.price.currency}<td class="text-right">{($estday * $GLOBAL.price)|default:"n/a"|number_format:"4"}</td>{/if}
+              {if $GLOBAL.config.price.currency}<td class="text-right">{($estday * $GLOBAL.price)|default:"NA"|number_format:"4"}</td>{/if}
               {/if}
             </tr>
 {/section}
 {if $listed != 1 && $GLOBAL.userdata.username|default:"" && $GLOBAL.userdata.rawhashrate|default:"0" > 0}
       {math assign="myestday" equation="round(reward / ( diff * pow(2,32) / ( hashrate * 1000 ) / 3600 / 24), 3)" diff=$DIFFICULTY reward=$REWARD hashrate=$GLOBAL.userdata.rawhashrate}
             {if $GLOBAL.userdata.username|default:""|lower == $CONTRIBHASHES[contrib].account|lower}{assign var=listed value=1}<tr class="success">{else}<tr>{/if}
-              <td>n/a</td>
+              <td>NA</td>
               <td>{if $GLOBAL.userdata.donate_percent|default:"0" >= 2}<i class="fa fa-trophy fa-fw"></i>{elseif $GLOBAL.userdata.donate_percent|default:"0" < 2 AND $GLOBAL.userdata.donate_percent|default:"0" > 0}<i class="fa fa-star-o fa-fw"></i>{else}<i class="fa fa-ban fa-fw"></i>{/if}</td>
               <td>{$GLOBAL.userdata.username|escape}</td>
               <td class="text-right">{$GLOBAL.userdata.rawhashrate|number_format}</td>
-              <td class="text-right">{$myestday|number_format:"3"|default:"n/a"}</td>
+              <td class="text-right">{$myestday|number_format:"3"|default:"NA"}</td>
               {if $GLOBAL.config.price.enabled}
-              {if $GLOBAL.config.price.currency}<td class="text-right">{($myestday * $GLOBAL.price)|default:"n/a"|number_format:"4"}</td>{/if}
+              {if $GLOBAL.config.price.currency}<td class="text-right">{($myestday * $GLOBAL.price)|default:"NA"|number_format:"4"}</td>{/if}
               {/if}
             </tr>
 {/if}
