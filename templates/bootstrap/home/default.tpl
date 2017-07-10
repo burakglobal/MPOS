@@ -7,8 +7,8 @@
             </div>
             <div class="panel-body">
                 <p><img src="favicon.ico" alt="{$SITECOINNAME|default:" Coin "}">                    
-                    <p>Welcome and thank you for visting. <a href="http://thecoin.pw">TheCoin.pw</a> is a trusted mining pool provider for various cryptocurrencies all of which contain non mandatory pool fees and utilise the proportional payout method.</p>
-                    <p><a href="http://thecoin.pw">TheCoin.pw</a> solely rely on member donations/advertising rewards to assist with ongoing costs related to the operation of all mining pools, please consider donating. We hope you enjoy this mining pool!
+                    <p>Welcome and thank you for visting. <a href="http://www.thecoin.pw">TheCoin.pw</a> is a trusted mining pool provider for various cryptocurrencies all of which contain non mandatory pool fees and utilise the proportional payout method.</p>
+                    <p><a href="http://www.thecoin.pw">TheCoin.pw</a> solely rely on member donations/advertising rewards to assist with ongoing costs related to the operation of all mining pools, please consider donating. We hope you enjoy this mining pool!
                     <div class="panel panel-info">
                         <div class="panel-heading">
                             <i class="fa fa-tasks fa-fw"></i> Pool Details
@@ -25,51 +25,47 @@
                                         <td>Proportional Payout</td>
                                     </tr>
                                     <tr>
-                                        <th>Pool Fees</th>
+                                        <th>Pool Fee</th>
                                         <td>0%</td>
-                                    </tr>
-                                    <tr>
-                                        <th>Withdrawal Fee</th>
-                                        <td>{$GLOBAL.config.txfee_manual} {$GLOBAL.config.currency}</td>
-                                    </tr>
-                                    <tr>
-                                        <th>Difficulty Selections</th>
-                                        <td>Automatic or Selectable (8 - 65536)</td>
-                                    </tr>
-                                    <tr>
-                                        <th>Stratum Support</th>
-                                        <td>Yes</td>
                                     </tr>
                                     <tr>
                                         <th>Payout Options</th>
                                         <td>Automatic or Manual</td>
                                     </tr>
                                     <tr>
-                                        <th>Pool Infrastructure</th>
-                                        <td>Solid State</td>
+                                        <th>Withdrawal Fee</th>
+                                        <td>{$GLOBAL.config.txfee_manual} {$GLOBAL.config.currency}</td>
+                                    </tr>
+                                    <tr>
+                                        <th>Difficulty Options</th>
+                                        <td>Automatic (1 - 65536) or Selectable (8 - 65536)</td>
+                                    </tr>
+                                    <tr>
+                                        <th>Notable Pool Features</th>
+                                        <td>Solid State Infrastructure, Stratum Support, SSL, DDoS Protection</td>
                                     </tr>
                                 </tbody>
                             </table>
                         </div>
                     </div>
-					<div class="panel panel-info">
-                        <div class="panel-heading">
-                            <i class="fa fa-external-link fa-fw"></i> Advertisement
-                        </div>
-                        <div class="panel-body no-padding table-responsive">
-							<center>
-								<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-								<ins class="adsbygoogle"
-								style="display:block"
-								data-ad-client="ca-pub-1496645407031699"
-								data-ad-slot="3529447763"
-								data-ad-format="auto"></ins>
-								<script>
-								(adsbygoogle = window.adsbygoogle || []).push({});
-								</script>
-							</center>
-                        </div>
-                    </div>					
+			<div class="panel panel-info">
+                        	<div class="panel-heading">
+                            		<i class="fa fa-external-link fa-fw"></i> Advertisement
+                        	</div>
+                        	<div class="panel-body no-padding table-responsive">
+					<center>
+						<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+						<ins class="adsbygoogle"
+						style="display:block"
+						data-ad-client="ca-pub-1496645407031699"
+						data-ad-slot="3529447763"
+						data-ad-format="auto"></ins>
+						<script>
+						(adsbygoogle = window.adsbygoogle || []).push({});
+						</script>
+					</center>
+                        	</div>
+                    	</div>					
                     {if $GLOBAL.config.algorithm == 'sha256d'}
                     <div class="panel panel-info">
                         <div class="panel-heading">
