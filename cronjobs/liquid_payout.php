@@ -39,7 +39,7 @@ $sendAddress = $config['coldwallet']['address'];
 $log->logDebug("The locked wallet balance and float amounts to: " .$dFloat. "");
 
 // Send liquid balance
-$send = number_format($dBalance - $dFloat,2);
+$send = round($dBalance - $dFloat,2);
 $log->logInfo("Liquid amount : " .$send. "");
 if($send > $dThreshold){
         if($sendAddress !== ''){
