@@ -39,12 +39,12 @@ $sendAddress = $config['coldwallet']['address'];
 $log->logDebug("The locked wallet balance and float amounts to: " .$dFloat. "");
 
 // Send liquid balance
-$send = $dBalance - $dFloat;
-$log->logInfo("Liquid amount : " .number_format($send,8). "");
+$send = number_format($dBalance - $dFloat,2);
+$log->logInfo("Liquid amount : " .$send. "");
 if($send > $dThreshold){
         if($sendAddress !== ''){
-                $bitcoin->sendtoaddress($sendAddress, number_format($send,8));
-				$log->logInfo("Liquid amount of " .number_format($send,8). " sent to wallet address " .$sendAddress. "");
+                $bitcoin->sendtoaddress($sendAddress, $send);
+				$log->logInfo("Liquid amount of " .$send. " sent to wallet address " .$sendAddress. "");
         }
         else {
                 $log->logInfo("No wallet address set");
