@@ -223,7 +223,7 @@ if ($setting->getValue('website_theme') == "mpos")
 
 // Check we can load the theme at all
 if ( !in_array($setting->getValue('website_theme'), $template->getThemes()))
-  die('Unable to find your selected theme `' . $setting->getValue('website_theme') . '` in the list of available themes. Please reset your `website_theme` setting in your database.');
+  die('Unable to find your selected theme `' . $setting->getValue('website_theme', 'bootstrap') . '` in the list of available themes. Please reset your `website_theme` setting in your database.');
 
 // So we can display additional info
 $smarty->assign('DEBUG', $config['DEBUG']);
