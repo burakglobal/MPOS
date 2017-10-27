@@ -1,4 +1,5 @@
 {include file="statistics/blocks/block_shares_graph.tpl"}
+{include file="statistics/blocks/block_overview_time.tpl"}
 	<div class="panel panel-info">
 		<div class="panel-heading">
 			<i class="fa fa-external-link fa-fw"></i> Advertisement
@@ -17,5 +18,4 @@
 			</center>
 		</div>
 	</div>	
-{include file="statistics/blocks/block_overview_time.tpl"}
 {include file="statistics/blocks/blocks_found_details.tpl"}
